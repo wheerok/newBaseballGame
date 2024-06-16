@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C6179D042C1DD76900DBF36A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6179D032C1DD76900DBF36A /* main.swift */; };
+		C6CD01542C1F21E700F96C75 /* BaseballGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD01532C1F21E700F96C75 /* BaseballGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		C6179D002C1DD76900DBF36A /* baseballGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = baseballGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6179D032C1DD76900DBF36A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C6CD01532C1F21E700F96C75 /* BaseballGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseballGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				C6179D032C1DD76900DBF36A /* main.swift */,
+				C6CD01532C1F21E700F96C75 /* BaseballGame.swift */,
 			);
 			path = baseballGame;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6179D042C1DD76900DBF36A /* main.swift in Sources */,
+				C6CD01542C1F21E700F96C75 /* BaseballGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
