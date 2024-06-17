@@ -7,10 +7,32 @@
 
 import Foundation
 
+class GameRecord{
+    var gameCount = 0
+    var attemptsPerGame = [Int]()
+    
+    func incrementGameStart(){
+        gameCount += 1
+    }
+    
+    func addAttemptsCount(_ attempts : Int) {
+        attemptsPerGame.append(attempts)
+    }
+    
+    func showRecord() {
+        for (index, attempts) in attemptsPerGame.enumerated() {
+            print("\(index + 1)번째 게임: \(attempts)")
+        }
+    }
+}
+
+
 class BaseballGame {
     
     var answer = [Int]()
     var isPlaying = true
+    var gameRecord = GameRecord()
+    
     
     func makeAnswer() {
         
@@ -42,23 +64,23 @@ class BaseballGame {
                     start()
                     
                     case "2" :
-                    start()
+                    gameRecord.showRecord()
                     
                     case "3" :
-                    start()
+                    endGame()
                     
                     default:
                         print("잘못된 입력입니다. 다시 선택해주세요.")
                 }
             }
-        }
-    }
+        } //isPlaying
+    } //FirstStep
     
     
     
     func start() {
         
-        
+        var currenAttempCount = 0
        makeAnswer()
         
         print("<게임을 시작합니다. 세 자리 숫자를 입력하세요!🤟>")
@@ -106,6 +128,8 @@ class BaseballGame {
                 continue
             }
             
+            
+            
             print("입력한 숫자: \(setUserInput)")
             
             
@@ -125,6 +149,7 @@ class BaseballGame {
                 print("<숫자가 아닌 값이 있습니다...😖 다시 입력해주세요!>")
             }
             
+            currenAttempCount += 1
             
             // 스트라이크, 볼
             var strike = 0
@@ -142,8 +167,21 @@ class BaseballGame {
             
             if strike == 3 {
                 print("<정답입니다! 게임을 종료합니다.🥳>")
+                gameRecord.addAttemptsCount(currenAttempCount)
+                print("\(gameRecord.gameCount) 게임,  시도 횟수 \(currenAttempCount)")
                 break
+                
             }
         }
+        
+        
+    } // BaseballGame
+    
+    func endGame() {
+        print("게임을 종료합니다~!😎")
+        isPlaying = false
     }
+    
 }
+
+
